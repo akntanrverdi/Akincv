@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ cv_data.first_name }} {{ cv_data.last_name }} - CV</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #444;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            background-color: #4CAF50;
+            padding: 10px 0;
+            list-style: none;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 18px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: #f2f2f2;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .content {
+            max-width: 320px;
+            margin: 12% auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 50px;
+            border: 2px solid #388E3C;  /* Yeşil sınır ekledik */
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .content h1 {
+            color: #388E3C;  /* Başlık rengini de yeşil yapalım */
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .about {
+            padding: 8px;
+            background-color: transparent;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .about p {
+            font-size: 0.85em;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .about strong {
+            color: #388E3C;  /* Hakkımda kısmındaki başlık için yeşil renk */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #388E3C;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Ana Sayfa</a></li>
+            <li><a href="/education/">Eğitim</a></li>
+            <li><a href="/contact/">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>{{ cv_data.first_name }} {{ cv_data.last_name }}</h1>
+
+        <div class="about">
+            <p><strong>Hakkımda</strong></p>
+            <p>Merhaba, ben Akın Tanrıverdi. Piri Reis Üniversitesi'nde Bilişim Sistemleri Mühendisliği öğrencisiyim. Şu an özellikle siber güvenlik ve ağ yönetimi (network operations) üzerine çalışıyorum.</p>
+            <p>Python, Java ve Linux gibi teknolojilerle ilgili deneyimim var. Bu alanlarda projeler yaparak kendimi geliştirmeye çalışıyorum.</p>
+            <p>Teknolojiye olan ilgim, sürekli yeni şeyler öğrenme isteğimi tetikliyor ve gelecekte bu alanda bir kariyer yapmak istiyorum.</p>
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <a href="/education/">Eğitim</a>
+        <a href="/contact/">İletişim</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Akın Tanrıverdi | Tüm Haklar Saklıdır</p>
+    </footer>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <title>{{ cv_data.first_name }} {{ cv_data.last_name }} - CV</title>
     <style>
@@ -39,21 +40,28 @@
 
         .content {
             max-width: 320px;
-            margin: 12% auto;
+            margin: 6% auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.85);
             border-radius: 50px;
-            border: 2px solid #388E3C;  /* Yeşil sınır ekledik */
+            border: 2px solid #388E3C;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
             text-align: center;
             backdrop-filter: blur(10px);
         }
 
         .content h1 {
-            color: #388E3C;  /* Başlık rengini de yeşil yapalım */
+            color: #388E3C;
             font-size: 1.5em;
             margin-bottom: 15px;
             font-weight: 600;
+        }
+
+        .content img {
+            width: 50%;
+            border-radius: 15px;
+            margin: 0 auto 15px auto;
+            display: block;
         }
 
         .about {
@@ -70,7 +78,7 @@
         }
 
         .about strong {
-            color: #388E3C;  /* Hakkımda kısmındaki başlık için yeşil renk */
+            color: #388E3C;
         }
 
         footer {
@@ -110,6 +118,8 @@
     <div class="content">
         <h1>{{ cv_data.first_name }} {{ cv_data.last_name }}</h1>
 
+        <img src="{% static 'kadikoybogasi.jpg' %}" alt="Kadıköy Boğası">
+
         <div class="about">
             <p><strong>Hakkımda</strong></p>
             <p>Merhaba, ben Akın Tanrıverdi. Piri Reis Üniversitesi'nde Bilişim Sistemleri Mühendisliği öğrencisiyim. Şu an özellikle siber güvenlik ve ağ yönetimi (network operations) üzerine çalışıyorum.</p>
@@ -124,7 +134,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Akın Tanrıverdi | Tüm Haklar Saklıdır</p>
+        <p>&copy; 2025 Akın Tanrıverdi | Eğer kumdan kalen varsa,denizin insafına mahkumsundur.</p>
     </footer>
 
 </body>
